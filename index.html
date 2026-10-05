@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Turno</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ENCABEZADO -->
+        <header class="header">
+            <div>
+                <h1>🍦 Mi Turno</h1>
+                <p>Control de ventas</p>
+            </div>
+
+            <button class="menu-btn">⋮</button>
+        </header>
+
+
+        <!-- RESUMEN -->
+        <section class="summary">
+
+            <span>VENTAS DE HOY</span>
+
+            <strong id="totalVentas">0</strong>
+
+            <small>unidades</small>
+
+        </section>
+
+
+        <!-- PRODUCTOS -->
+        <section class="products-section">
+
+            <h2>¿Qué vendiste?</h2>
+
+            <div class="products-grid">
+
+                <!-- CONOS -->
+                <article class="product-card">
+
+                    <div class="product-icon">🍦</div>
+
+                    <h3>Conos</h3>
+
+                    <div class="quantity" id="conos">0</div>
+
+                    <div class="buttons">
+
+                        <button onclick="restar('conos')">
+                            −
+                        </button>
+
+                        <button onclick="sumar('conos')">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ACRÍLICOS -->
+                <article class="product-card">
+
+                    <div class="product-icon">🥤</div>
+
+                    <h3>Vasos acrílicos</h3>
+
+                    <div class="quantity" id="acrilicos">0</div>
+
+                    <div class="buttons">
+
+                        <button onclick="restar('acrilicos')">
+                            −
+                        </button>
+
+                        <button onclick="sumar('acrilicos')">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POLIPAPEL -->
+                <article class="product-card">
+
+                    <div class="product-icon">🥤</div>
+
+                    <h3>Vasos polipapel</h3>
+
+                    <div class="quantity" id="polipapel">0</div>
+
+                    <div class="buttons">
+
+                        <button onclick="restar('polipapel')">
+                            −
+                        </button>
+
+                        <button onclick="sumar('polipapel')">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 12 OZ -->
+                <article class="product-card">
+
+                    <div class="product-icon">🥤</div>
+
+                    <h3>Vasos 12 oz</h3>
+
+                    <div class="quantity" id="vasos12oz">0</div>
+
+                    <div class="buttons">
+
+                        <button onclick="restar('vasos12oz')">
+                            −
+                        </button>
+
+                        <button onclick="sumar('vasos12oz')">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- COPAS -->
+            <article class="product-card horizontal">
+
+                <div class="product-icon">🍨</div>
+
+                <h3>Copas</h3>
+
+                <div class="quantity" id="copas">0</div>
+
+                <div class="buttons">
+
+                    <button onclick="restar('copas')">
+                        −
+                    </button>
+
+                    <button onclick="sumar('copas')">
+                        +
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- CERRAR TURNO -->
+        <button class="close-shift" onclick="cerrarTurno()">
+            CERRAR TURNO
+        </button>
+         
+        <!-- HISTORIAL -->
+
+<section class="history-section">
+
+    <div class="history-title">
+
+        <div>
+            <h2>Historial de turnos</h2>
+            <p>Tus turnos anteriores</p>
+        </div>
+
+        <span>📋</span>
+
+    </div>
+
+
+    <div id="historial">
+
+        <p class="sin-historial">
+            Todavía no tienes turnos registrados.
+        </p>
+
+    </div>
+
+    </section> 
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
